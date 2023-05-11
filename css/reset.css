@@ -1,0 +1,100 @@
+body {
+	background: #cccccc;
+	padding: 10px;
+}
+
+main {
+	/*margin-left: 320px;
+	display: flex;
+	flex-wrap: wrap;*/
+	margin-left: 320px;
+
+	/*display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/*grid-template-rows: repeat(3, 100px);*/
+
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 100px);
+}
+
+aside {
+	width: 300px;
+	position: absolute;
+}
+
+article,
+.element {
+	padding: 10px;
+	margin: 10px;
+}
+
+article {
+	background: #fff;
+	display: block;
+	border-radius: 5px;
+	/*min-height: 120px;*/
+	height: 200px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.search,
+.sort,
+.filter,
+.display {
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	margin: 10px 0px;
+	padding: 5px 10px;
+
+}
+
+
+img {
+	float: left;
+	margin: 10px;
+}
+
+h2 {
+	font-size: 12px;
+}
+
+ul {
+	list-style: none;
+}
+
+
+span {
+	color: #a09e9e;
+}
+
+.grille {
+	/*max-height: 200px;*/
+	/*float: left;*/
+
+	/*width: 45%;*/
+	overflow-y: scroll;
+}
+
+input[type="search"],
+select {
+	margin: 5px 0px;
+	padding: 5px 0px;
+	width: 100%;
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+p {
+	margin: 5px;
+}
+
+button {
+	margin: 5px 0px;
+	padding: 5px;
+}

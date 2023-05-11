@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="main.js" type="module"></script>
+    <title>Movies DB</title>
+</head>
+
+<body>
+    <aside class="left">
+        <div class="search">
+            <form id="searchForm">
+                <label>
+                    <p>Recherche</p>
+                    <input type="search" name="search">
+                </label>
+                <button>Rechercher</button>
+            </form>
+        </div>
+        <div class="sort">
+            <p>Trie</p>
+            <select name="" id="">
+                <option value="1">Categorie descendant</option>
+                <option value="2">Categorie ascendant</option>
+                <option value="3">Prix descendant</option>
+                <option value="4">Prix acendant</option>
+            </select>
+        </div>
+        <div class="filter">
+            <p>Filtre par Categorie</p>
+            <div class="categoryFilter">
+            </div>
+            <p>Filtre par prix</p>
+            <div class="priceFilter"></div>
+        </div>
+        <div class="display">
+            <p>Display</p>
+            <div>
+                <input type="radio" id="grid" name="display" value="grid" checked>
+                <label for="grid">Grid</label>
+            </div>
+            <div>
+                <input type="radio" id="list" name="display" value="list">
+                <label for="list">List</label>
+            </div>
+        </div>
+    </aside>
+    <main>
+    </main>
+</body>
+
+</html>
