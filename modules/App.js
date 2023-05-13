@@ -72,17 +72,27 @@ export default class App {
      * @returns Products
      */
     searchProducts(searchString) {
-        let results;
-        results = this.#products.filter((product) => {
+        let listProducts = this.#products.filter((product) => {
             return product.title.includes(searchString);
         });
-        this.#displayProducts(results);
+        this.#displayProducts(listProducts);
     }
     // TRI
 
     // FILTRE
-    filterProducts(categoryFiltre, priceFilter) {
+    filterProducts(categoryFiltre, priceFilter, products = this.#products) {
+        if (priceFilter == null) {
+            let listProducts = products.filter(product => {
+                return product.category == categoryFiltre;
+            })
+            this.#displayProducts(listProducts);
 
+        } else {
+            let listProducts = products.filter(product => {
+                return product.category == categoryFiltre && product.price == priceFilter;
+            })
+            this.#displayProducts(listProducts);
+        }
     }
 
 

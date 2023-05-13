@@ -98,3 +98,7 @@ button {
 	margin: 5px 0px;
 	padding: 5px;
 }
+.grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
