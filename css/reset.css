@@ -8,11 +8,9 @@ main {
 	display: flex;
 	flex-wrap: wrap;*/
 	margin-left: 320px;
-
 	/*display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	/*grid-template-rows: repeat(3, 100px);*/
-
 }
 
 .wrapper {
@@ -36,9 +34,9 @@ article {
 	background: #fff;
 	display: block;
 	border-radius: 5px;
-	/*min-height: 120px;*/
 	height: 200px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	overflow-y: scroll;
 }
 
 .search,
@@ -49,9 +47,7 @@ article {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	margin: 10px 0px;
 	padding: 5px 10px;
-
 }
-
 
 img {
 	float: left;
@@ -66,17 +62,8 @@ ul {
 	list-style: none;
 }
 
-
-span {
+li>span {
 	color: #a09e9e;
-}
-
-.grille {
-	/*max-height: 200px;*/
-	/*float: left;*/
-
-	/*width: 45%;*/
-	overflow-y: scroll;
 }
 
 input[type="search"],
@@ -86,8 +73,12 @@ select {
 	width: 100%;
 }
 
-input[type="radio"] {
-	margin-right: 10px;
+input[type="checkbox"] {
+	margin-right: 20px;
+}
+
+.priceFilter input[type="checkbox"] {
+	position: absolute;
 }
 
 p {
@@ -98,7 +89,14 @@ button {
 	margin: 5px 0px;
 	padding: 5px;
 }
-.grid{
+
+.grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+}
+
+.list {
+	width: 100px;
+	display: block;
+	text-align: right;
 }

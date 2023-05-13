@@ -1,18 +1,28 @@
 import App from "./modules/App.js";
-
 const app = new App();
-
-
-// RECHERCHER
-const searchInputEl = document.querySelector("input[name='search']");
+//
+// FORM RECHERCHER
 const searchButtonEl = document.querySelector("#searchForm button");
 searchButtonEl.addEventListener("click", (e) => {
     e.preventDefault();
-    const searchString = searchInputEl.value;
-    app.searchProducts(searchString);
+    app.showProducts();
 });
-
-// DISPLAY
+//
+// TRI
+const sort = document.querySelector("#sort");
+sort.addEventListener('change', () => app.showProducts())
+//
+// FILTRE
+const categoryEl = document.getElementsByName("category");
+for (const category of categoryEl) {
+    category.addEventListener('click', () => { app.showProducts(); });
+}
+const priceEl = document.getElementsByName("price");
+for (const price of priceEl) {
+    price.addEventListener('click', () => { app.showProducts(); });
+}
+//
+// DISPLAY GRID OU LINE
 var radios = document.querySelectorAll('input[type=radio][name="display"]');
 for (let radio of radios) {
     radio.addEventListener('click', () => {
@@ -24,9 +34,3 @@ for (let radio of radios) {
         }
     })
 };
-// FILTRE
-const categoryEl = document.getElementsByName("category");
-console.log(categoryEl);
-categoryEl.addEventListener('click', app.categoryFilter());
-// TRI
-//******************************
